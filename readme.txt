@@ -1,5 +1,5 @@
 === All-in-One Custom Backgrounds Lite ===
-Contributors: adrian2k7,creabrain
+Contributors: adrian2k7
 Tags: background, image, video, color, gradient, youtube
 Donate link: http://q.gs/83pjw
 Requires at least: 4.0
