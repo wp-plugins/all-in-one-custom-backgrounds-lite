@@ -50,18 +50,16 @@ You can install the plugin in two ways:
 
 = From within WordPress plugin installation (recommended) =
 
-1. Search for \"All-in-One Custom Backgrounds\"
+1. Search for "All-in-One Custom Backgrounds"
 1. Download and then active it.
 1. Install and activate the needed Vafpress framework. (In case of any problemes, you may [download](https://github.com/scrobbleme/vafpress-framework/releases/download/v2.0.1-MOEWE/vafpress-framework-plugin-2.0.1-MOEWE-Edition.zip) and install it manually.)
 
 or
 
-1. Upload and activate the file \"all-in-one-custom-backgrounds-lite.zip\" manually.
-
-= From the WordPress plugins page =
+= Upload and activate the file manually via FTP =
 
 1. Download the plugin, extract the zip file.
-1. Upload the \"all-in-one-custom-backgrounds-lite\" folder to your /wp-content/plugins/ directory.
+1. Upload the "all-in-one-custom-backgrounds-lite" folder to your /wp-content/plugins/ directory.
 1. Active the plugin in the plugin menu panel in your administration area.
 1. Install and activate the needed Vafpress framework. (In case of any problemes, you may [download](https://github.com/scrobbleme/vafpress-framework/releases/download/v2.0.1-MOEWE/vafpress-framework-plugin-2.0.1-MOEWE-Edition.zip) and install it manually.)
 
