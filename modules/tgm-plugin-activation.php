@@ -13,7 +13,7 @@ if (!function_exists('moewe_studio_register_required_plugins')) {
     {
         $plugins = array(
             array(
-                'name' => __('Vafpress', '__PRODUCT_LANGUAGE_KEY__'),
+                'name' => __('Vafpress', 'all-in-one-custom-backgrounds-lite'),
                 'slug' => 'vafpress-framework-plugin',
                 'source' => 'https://github.com/scrobbleme/vafpress-framework/releases/download/v2.0.1-MOEWE/vafpress-framework-plugin-2.0.1-MOEWE-Edition.zip',
                 'required' => true,
@@ -30,8 +30,8 @@ if (!function_exists('moewe_studio_register_required_plugins')) {
             'is_automatic' => true, // Automatically activate plugins after installation or not.
             'message' => '', // Message to output right before the plugins table.
             'strings' => array(
-                'notice_can_install_required' => _n_noop('__PLUGIN_PRODUCT_TITLE__ requires the following plugin: %1$s.', '__PLUGIN_PRODUCT_TITLE__ requires the following plugins: %1$s.'), // %1$s = plugin name(s).
-                'notice_ask_to_update' => _n_noop('The following plugin needs to be updated to its latest version to ensure maximum compatibility with __PLUGIN_PRODUCT_TITLE__: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with __PLUGIN_PRODUCT_TITLE__: %1$s.'), // %1$s = plugin name(s).
+                'notice_can_install_required' => _n_noop('All-in-One Custom Backgrounds Lite requires the following plugin: %1$s.', 'All-in-One Custom Backgrounds Lite requires the following plugins: %1$s.'), // %1$s = plugin name(s).
+                'notice_ask_to_update' => _n_noop('The following plugin needs to be updated to its latest version to ensure maximum compatibility with All-in-One Custom Backgrounds Lite: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with All-in-One Custom Backgrounds Lite: %1$s.'), // %1$s = plugin name(s).
                 'nag_type' => 'updated' // Determines admin notice type - can only be 'updated', 'update-nag' or 'error'.
             )
         );

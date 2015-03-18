@@ -4,7 +4,7 @@ Tags: background, image, video, color, gradient, youtube
 Donate link: http://q.gs/83pjw
 Requires at least: 4.0
 Tested up to: 4.1.1
-Stable tag: 2.0
+Stable tag: 2.0.1
 License: GPL v3
 License URI: http://www.gnu.org/copyleft/gpl.html
 
@@ -24,6 +24,11 @@ The lite versions supports the following features:
    * YouTube
 * Device restrictions
 * Custom post type support
+
+**Support**
+
+Please use the [support forum](https://wordpress.org/support/plugin/all-in-one-custom-backgrounds-lite) in case of any problems or questions before
+just giving a bad rating. We really take this seriously.
 
 = HINT =
 
@@ -58,14 +63,24 @@ or
 1. Download the plugin, extract the zip file.
 1. Upload the \"all-in-one-custom-backgrounds-lite\" folder to your /wp-content/plugins/ directory.
 1. Active the plugin in the plugin menu panel in your administration area.
+1. Install and activate the needed Vafpress framework. (In case of any problemes, you may [download](https://github.com/scrobbleme/vafpress-framework/releases/download/v2.0.1-MOEWE/vafpress-framework-plugin-2.0.1-MOEWE-Edition.zip) and install it manually.)
 
 == Frequently Asked Questions ==
-Currently no entries.
+
+= Where are the configuration options? =
+
+To be able to use this plugin, you have to install the optional Vafpress framework. You should be prompted
+for this after activating the plugin. In case of any problems with this read [here](https://www.moewe-studio.com/demo/installation-updating/#install_vafpress).
 
 == Screenshots ==
 1. Options panel to select default background
 2. Background configuration
 
 == Changelog ==
+
+= 2.0.1 =
+* Fixed some wrong strings
+* Improved descritpion
+
 = 2.0 =
 * Initial public release, based on version 2.0 of pro version

@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'title' => '__PLUGIN_PRODUCT_TITLE__',
+    'title' => 'All-in-One Custom Backgrounds Lite',
     'logo' => plugin_dir_url(__FILE__) . '../images/thumbnail.png',
     'menus' => array(
         array(
