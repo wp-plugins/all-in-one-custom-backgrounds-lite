@@ -1,10 +1,10 @@
 === All-in-One Custom Backgrounds Lite ===
-Contributors: adrian2k7
+Contributors: adrian2k7, creabrain
 Tags: background, image, video, color, gradient, youtube
 Donate link: http://q.gs/83pjw
 Requires at least: 4.0
 Tested up to: 4.1.1
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPL v3
 License URI: http://www.gnu.org/copyleft/gpl.html
 
@@ -75,6 +75,9 @@ for this after activating the plugin. In case of any problems with this read [he
 2. Background configuration
 
 == Changelog ==
+
+= 2.0.2 =
+* Improved general compatibility and hopefully solved "crashing sites"
 
 = 2.0.1 =
 * Fixed some wrong strings

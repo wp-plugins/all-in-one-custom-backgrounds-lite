@@ -3,7 +3,7 @@
 Plugin Name: All-in-One Custom Backgrounds Lite
 Plugin URI: http://demo.moewe-studio.com/wp/easy-custom-backgrounds/?utm_source=wp_backend
 Description: All-in-One Custom Backgrounds Lite allows you to define separate backgrounds for each post or page. There is also a <a href="http://q.gs/83pjw" target="_blank">pro version</a> with support and more features available.
-Version: 2.0.1
+Version: 2.0.2
 Author: MOEWE Studio (by Markus Weigelt)
 Author URI: http://www.moewe-studio.com/?utm_source=wp_backend
 */
@@ -78,8 +78,8 @@ class All_In_One_Custom_Backgrounds_Lite
 
     function after_setup_theme()
     {
-        if (!class_exists('VP_Metabox')) {
-            return; // Vafpress needs to be installed first
+        if (!defined('VP_VERSION')) {
+            return;
         }
 
         function fpbgAppend($type, &$fields)
@@ -152,6 +152,10 @@ class All_In_One_Custom_Backgrounds_Lite
 
     public function get_background_meta()
     {
+        if (!defined('VP_VERSION')) {
+            return;
+        }
+	
         if ($this->backgroundMeta == null) {
             $commonMetabox = vp_metabox('aiocb_mb_common');
             if (is_array($commonMetabox->meta)) {
@@ -180,6 +184,7 @@ class All_In_One_Custom_Backgrounds_Lite
                 $this->backgroundMeta = $this->get_default_background_group_metabox()->meta;
             }
         }
+		
 
         return $this->backgroundMeta;
     }
@@ -210,9 +215,6 @@ class All_In_One_Custom_Backgrounds_Lite
 
     function init_scripts()
     {
-        if (!defined('VP_VERSION')) {
-            return;
-        }
         $videoType = null;
         $hasImageType = false;
 
