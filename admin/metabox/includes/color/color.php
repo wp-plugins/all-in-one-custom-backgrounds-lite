@@ -13,10 +13,11 @@ return array(
                 'name' => 'cp',
                 'label' => 'Colorpicker',
                 'description' => 'Pick color or insert color as hex value.',
-                'default' => '#EEEEEE',
-                'format' => 'hex',
+                'default' => 'rgba(238,238,238,1)',
+                'format' => 'rgba'
             ), 
         ),
         'dependency' => $fpbgTypeColorDependency,
-    ),
+    )
 );
+
