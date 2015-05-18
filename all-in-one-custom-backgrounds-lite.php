@@ -3,7 +3,7 @@
 Plugin Name: All-in-One Custom Backgrounds Lite
 Plugin URI: http://demo.moewe-studio.com/wp/easy-custom-backgrounds/?utm_source=wp_backend
 Description: All-in-One Custom Backgrounds Lite allows you to define separate backgrounds for each post or page. There is also a <a href="http://q.gs/83pjw" target="_blank">pro version</a> with support and more features available.
-Version: 2.1
+Version: 2.2
 Author: MOEWE Studio (by Markus Weigelt)
 Author URI: http://www.moewe-studio.com/?utm_source=wp_backend
 */
@@ -13,11 +13,10 @@ if (!defined('ABSPATH')) {
     die("Don't touch this.");
 }
 
-require_once 'modules/tgm-plugin-activation.php';
-
 class All_In_One_Custom_Backgrounds_Lite
 {
     private $backgroundMeta = null;
+    private $version = '2.2';
 
     function __construct()
     {
@@ -71,13 +70,20 @@ class All_In_One_Custom_Backgrounds_Lite
 
     function plugin_action_links($links)
     {
-        $links[] = '<a href="' . admin_url('edit.php?post_type=backgroundgroup') . '">Groups</a>';
-        $links[] = '<a href="' . admin_url('themes.php?page=all-in-one-custom-backgrounds') . '">Options  </a>';
+        if (defined('VP_VERSION')) {
+            $links[] = '<a href="' . admin_url('edit.php?post_type=backgroundgroup') . '">Groups</a>';
+            $links[] = '<a href="' . admin_url('themes.php?page=all-in-one-custom-backgrounds') . '">Options  </a>';
+        } else {
+            $links[] = '<br /><a href="' . admin_url('themes.php?page=tgmpa-install-plugins') . '" style="color: red;">Please install required Vafpress</a>';
+        }
+
         return $links;
     }
 
     function after_setup_theme()
     {
+        require_once "modules/class-tgm-plugin-activation.php";
+
         if (!defined('VP_VERSION')) {
             return;
         }
@@ -155,7 +161,7 @@ class All_In_One_Custom_Backgrounds_Lite
         if (!defined('VP_VERSION')) {
             return;
         }
-	
+
         if ($this->backgroundMeta == null) {
             $commonMetabox = vp_metabox('aiocb_mb_common');
             if (is_array($commonMetabox->meta)) {
@@ -184,7 +190,7 @@ class All_In_One_Custom_Backgrounds_Lite
                 $this->backgroundMeta = $this->get_default_background_group_metabox()->meta;
             }
         }
-		
+
 
         return $this->backgroundMeta;
     }
@@ -245,7 +251,7 @@ class All_In_One_Custom_Backgrounds_Lite
             wp_enqueue_script(
                 'ecbg-backstretch',
                 plugins_url('/assets/javascript/jquery.backstretch.min.js', __FILE__),
-                array('jquery')
+                array('jquery'), $this->version
             );
         }
 
@@ -253,9 +259,9 @@ class All_In_One_Custom_Backgrounds_Lite
             wp_enqueue_script(
                 'ecbg-ytplayer',
                 plugins_url('/assets/javascript/jquery.mb.YTPlayer.js', __FILE__),
-                array('jquery')
+                array('jquery'), $this->version
             );
-            wp_enqueue_style('ecbg-ytplayer', plugins_url('/assets/css/YTPlayer.css', __FILE__));
+            wp_enqueue_style('ecbg-ytplayer', plugins_url('/assets/css/YTPlayer.css', __FILE__), array(), $this->version);
         endif;
     }
 }
