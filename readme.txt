@@ -4,7 +4,7 @@ Tags: background, image, video, color, gradient, youtube
 Donate link: http://q.gs/83pjw
 Requires at least: 4.0
 Tested up to: 4.2
-Stable tag: 2.2.1
+Stable tag: 2.2.1.1
 License: GPL v3
 License URI: http://www.gnu.org/copyleft/gpl.html
 
@@ -75,6 +75,9 @@ for this after activating the plugin. In case of any problems with this read [he
 2. Background configuration
 
 == Changelog ==
+
+= 2.2.1.1 =
+* Included the fix ;)
 
 = 2.2.1 =
 * Fixed bug, where only the last 5 background groups where shown in the selection
