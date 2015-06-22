@@ -3,7 +3,7 @@
 Plugin Name: All-in-One Custom Backgrounds Lite
 Plugin URI: http://demo.moewe-studio.com/wp/easy-custom-backgrounds/?utm_source=wp_backend
 Description: All-in-One Custom Backgrounds Lite allows you to define separate backgrounds for each post or page. There is also a <a href="http://q.gs/83pjw" target="_blank">pro version</a> with support and more features available.
-Version: 2.2
+Version: 2.2.1
 Author: MOEWE Studio (by Markus Weigelt)
 Author URI: http://www.moewe-studio.com/?utm_source=wp_backend
 */
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 class All_In_One_Custom_Backgrounds_Lite
 {
     private $backgroundMeta = null;
-    private $version = '2.2';
+    private $version = '2.2.1';
 
     function __construct()
     {
