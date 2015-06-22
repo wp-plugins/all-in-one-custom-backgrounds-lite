@@ -88,6 +88,7 @@ function is_disabled($value)
 function aiocb_get_backgroundGroups()
 {
 	$wp_posts = get_posts(array(
+			'posts_per_page' => -1,
             'post_type' => 'backgroundgroup',
             'post_status' => 'publish'
 	));
