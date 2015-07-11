@@ -3,8 +3,8 @@
 Plugin Name: All-in-One Custom Backgrounds Lite
 Plugin URI: http://demo.moewe-studio.com/wp/easy-custom-backgrounds/?utm_source=wp_backend
 Description: All-in-One Custom Backgrounds Lite allows you to define separate backgrounds for each post or page. There is also a <a href="http://q.gs/83pjw" target="_blank">pro version</a> with support and more features available.
-Version: 2.2.1.1
-Author: MOEWE Studio (by Markus Weigelt)
+Version: 2.2.2
+Author: MOEWE GbR
 Author URI: http://www.moewe-studio.com/?utm_source=wp_backend
 */
 
@@ -16,14 +16,14 @@ if (!defined('ABSPATH')) {
 class All_In_One_Custom_Backgrounds_Lite
 {
     private $backgroundMeta = null;
-    private $version = '2.2.1.1';
+    private $version = '2.2.2';
 
     function __construct()
     {
         register_activation_hook(__FILE__, array($this, 'table_update'));
 
         add_action('init', array($this, 'register_backgroundgroup_type'));
-        add_action('after_setup_theme', array($this, 'after_setup_theme'));
+        add_action('after_setup_theme', array($this, 'after_setup_theme'), 1000, 0);
         add_action('wp_enqueue_scripts', array($this, 'init_scripts'));
 
         if (is_admin()) {
@@ -82,7 +82,7 @@ class All_In_One_Custom_Backgrounds_Lite
 
     function after_setup_theme()
     {
-        require_once "modules/class-tgm-plugin-activation.php";
+        require_once "modules/tgm-plugin-activation.php";
 
         if (!defined('VP_VERSION')) {
             return;

@@ -4,6 +4,10 @@ if (!defined('ABSPATH')) {
     die("Don't touch this.");
 }
 
+if (!function_exists('tgmpa_load_bulk_installer')) {
+    require_once 'class-tgm-plugin-activation.php';
+}
+
 add_action('tgmpa_register', 'moewe_studio_register_required_plugins');
 
 if (!function_exists('moewe_studio_register_required_plugins')) {
