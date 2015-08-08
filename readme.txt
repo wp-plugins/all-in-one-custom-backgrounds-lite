@@ -3,7 +3,7 @@ Contributors: adrian2k7, creabrain
 Tags: background, image, video, color, gradient, youtube
 Donate link: http://q.gs/83pjw
 Requires at least: 4.0
-Tested up to: 4.2
+Tested up to: 4.3
 Stable tag: 2.2.2
 License: GPL v3
 License URI: http://www.gnu.org/copyleft/gpl.html
