@@ -1,7 +1,7 @@
 === All-in-One Custom Backgrounds Lite ===
 Contributors: adrian2k7, creabrain
 Tags: background, image, video, color, gradient, youtube
-Donate link: http://q.gs/83pjw
+Donate link: http://www.moewe.io/demo/all-in-one-custom-backgrounds/
 Requires at least: 4.0
 Tested up to: 4.3
 Stable tag: 2.2.2
